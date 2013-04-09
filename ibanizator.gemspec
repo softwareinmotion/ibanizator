@@ -7,5 +7,5 @@ Gem::Specification.new do |s|
   s.authors = ["Christoph Stettner"]
   s.email = 'christoph.stettner@softwareinmotion.de'
   s.files = ["lib/ibanizator.rb"]
-  s.homepage = ''
+  s.homepage = 'https://github.com/softwareinmotion/ibanizator'
 end
