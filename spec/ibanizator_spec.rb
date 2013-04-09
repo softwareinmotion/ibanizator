@@ -47,6 +47,44 @@ describe Ibanizator do
     end
   end
 
+  describe '#validate_iban' do
+    context 'given valid iban' do
+      let(:iban) { 'DE58123456780123456789' }
+
+      it 'returns true' do
+        expect(ibanizator.validate_iban(iban)).to be_true
+      end
+    end
+
+    context 'given invalid iban' do
+      let(:iban) { 'DE13100000001234567890' }
+
+      it 'returns false' do
+        expect(ibanizator.validate_iban(iban)).to be_false
+      end
+
+      context 'given invalid country code' do
+        let(:iban) { 'XX13100000001234567890' }
+
+        it 'throws unknown country code exception' do
+          expect {
+            ibanizator.validate_iban(iban)
+          }.to raise_error
+        end
+      end
+
+      context 'given invalid length' do
+        let(:iban) { 'DE13100000001234567' }
+
+        it 'throws wrong lenth exception' do
+          expect {
+            ibanizator.validate_iban(iban)
+          }.to raise_error
+        end
+      end
+    end
+  end
+
   describe '#character_to_digit' do
     context 'given :de as country code' do
       it 'calculates 1314 as numeral country code' do
