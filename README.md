@@ -18,7 +18,7 @@ For all methods you need an ibanizator object.
 
 To calculate the iban for some german accounts, just use this method:
 
-    ibanizator.calculate_iban country_code: :de, bank_number: '12345678', account_number: '123456789'
+    ibanizator.calculate_iban country_code: :de, bank_code: '12345678', account_number: '123456789'
 
 In Version 0.0.1 the ibanizator gem only works for german accounts.
 
