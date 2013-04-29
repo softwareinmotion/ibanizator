@@ -66,20 +66,16 @@ describe Ibanizator do
       context 'given invalid country code' do
         let(:iban) { 'XX13100000001234567890' }
 
-        it 'throws unknown country code exception' do
-          expect {
-            ibanizator.validate_iban(iban)
-          }.to raise_error
+        it 'returns false' do
+          expect(ibanizator.validate_iban(iban)).to eq(false)
         end
       end
 
       context 'given invalid length' do
         let(:iban) { 'DE13100000001234567' }
 
-        it 'throws wrong lenth exception' do
-          expect {
-            ibanizator.validate_iban(iban)
-          }.to raise_error
+        it 'returns false' do
+          expect(ibanizator.validate_iban(iban)).to eq(false)
         end
       end
     end

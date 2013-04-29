@@ -1,3 +1,5 @@
+require_relative 'iban/validator'
+
 class Ibanizator
   def calculate_iban options
     # Error handling
@@ -15,21 +17,9 @@ class Ibanizator
   end
 
   def validate_iban iban
-    country_codes = { :de => 22 }
-    country_code = iban[0..1].downcase.to_sym
-    checksum = iban[2..3]
-
-    # Error handling
-    if country_codes[country_code]
-      raise '' if iban.length != 22
-    else
-      raise ''
-    end
-
-    # Works only for Germany
-    calculated_checksum = calculate_checksum iban[4..11], iban[12..22], character_to_digit(country_code.to_s)
-
-    checksum == calculated_checksum ? true : false
+    # for the sake of compatibility
+    validator = Iban::Validator.new
+    validator.validate_iban(iban)
   end
 
   def character_to_digit char
