@@ -1,4 +1,5 @@
 require_relative 'iban/validator'
+require_relative 'swift_bic/bank_db'
 
 class Ibanizator
   def calculate_iban options
@@ -20,6 +21,16 @@ class Ibanizator
     # for the sake of compatibility
     validator = Iban::Validator.new
     validator.validate_iban(iban)
+  end
+
+  def bic bank_code
+    bank_db = SwiftBic::BankDb.new bank_code
+    bank_db.bic
+  end
+
+  def bank_name bank_code
+    bank_db = SwiftBic::BankDb.new bank_code
+    bank_db.bank_name
   end
 
   def character_to_digit char

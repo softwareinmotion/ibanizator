@@ -81,6 +81,38 @@ describe Ibanizator do
     end
   end
 
+  describe '#bic' do
+    before :each do
+      SwiftBic::BankDb.stub(:new => stub(:bic => 'MARKDEF1100'))
+    end
+
+    describe 'given valid german bank code' do
+      it 'returns the bic' do
+        expect(ibanizator.bic('10000000')).to eq('MARKDEF1100')
+      end
+    end
+
+    describe 'given invalid bank code' do
+      it 'throws an exception'
+    end
+  end
+
+  describe '#bank_name' do
+    before :each do
+      SwiftBic::BankDb.stub(:new => stub(:bic => 'BBk Berlin'))
+    end
+
+    describe 'given valid german bank code' do
+      it 'returns the bank name' do
+        expect(ibanizator.bic('10000000')).to eq('BBk Berlin')
+      end
+    end
+
+    describe 'given invalid bank code' do
+      it 'throws an exception'
+    end
+  end
+
   describe '#character_to_digit' do
     context 'given :de as country code' do
       it 'calculates 1314 as numeral country code' do
