@@ -19,7 +19,7 @@ module SwiftBic
 
     def load_table_row bank_number
       begin
-        db = SQLite3::Database.open("db/blz.db")
+        db = SQLite3::Database.open(File.expand_path("../../../db/blz.db", __FILE__))
         row = db.execute("SELECT * FROM blz WHERE blz = '#{bank_number}'")
       rescue SQLite3::Exception => e
         throw e
