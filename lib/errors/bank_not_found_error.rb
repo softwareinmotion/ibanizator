@@ -1,0 +1,2 @@
+class BankNotFoundError < Exception
+end

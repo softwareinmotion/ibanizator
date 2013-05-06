@@ -1,0 +1,2 @@
+class InvalidBankCodeError < Exception
+end
