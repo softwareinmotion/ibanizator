@@ -9,5 +9,4 @@ Gem::Specification.new do |s|
   s.files = ["lib/ibanizator.rb", "lib/iban/validator.rb", "lib/iban/lengths.rb", "lib/swift_bic/bank_db.rb", "db/blz.db"]
   s.files += Dir["lib/errors/*.rb"]
   s.homepage = 'https://github.com/softwareinmotion/ibanizator'
-  s.add_runtime_dependency 'sqlite3', '~> 1.3', '>= 1.3.7'
 end
