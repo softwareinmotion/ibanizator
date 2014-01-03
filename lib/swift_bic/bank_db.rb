@@ -5,7 +5,7 @@ module SwiftBic
   class BankDb
 
     BANKS = {}.tap do |banks|
-      File.open('db/blz.txt', 'r').each_line do |line|
+      File.open(File.expand_path("../../../db/blz.txt", __FILE__), 'r').each_line do |line|
         code, _, _, _, _, name, _, bic = line.unpack 'A8A1A58A5A35A27A5A11'
         next if bic.empty?
         name.force_encoding('iso-8859-1').encode!('utf-8')
