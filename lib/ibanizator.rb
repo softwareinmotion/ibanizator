@@ -6,6 +6,10 @@ class Ibanizator
     # Error handling
     # TODO
 
+    # delete spaces
+    options[:account_number] = options[:account_number].gsub(/\s+/, '')
+    options[:bank_code] = options[:bank_code].gsub(/\s+/, '')
+
     # Fill account number to 10 digits
     while options[:account_number].size < 10 do
       options[:account_number] = options[:account_number].rjust(10, '0')

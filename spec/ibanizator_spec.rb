@@ -34,6 +34,14 @@ describe Ibanizator do
       end
     end
 
+    context 'given bank code and account number with spaces' do
+      let(:options) { { country_code: :de, bank_code: '123 456 78', account_number: '123 456 789' } }
+
+      it 'strips spaces and still calculates the currect checksum' do
+        expect(ibanizator.calculate_iban(options)[2..3]).to eq('58')
+      end
+    end
+
     context 'given wrong bank code' do
       it 'throws an exception'
     end
