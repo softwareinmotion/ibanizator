@@ -8,16 +8,17 @@ module Iban
       valid_length?(iban) && valid_checksum?(iban)
     end
 
+    # public because it's used in `Ibanizator.calculate_iban`
+    def sanitize_input(input)
+      input.to_s.chomp.gsub(/\s+/,"")
+    end
+
     private
 
     def valid_length?(iban)
       return false if iban.length <= 4 # two digits for the country code and two for the checksum
       country_code = iban[0..1].upcase.to_sym
       iban.length == LENGTHS[country_code]
-    end
-
-    def sanitize_input(input)
-      input.to_s.chomp.gsub(/\s+/,"")
     end
 
     def valid_checksum?(iban)

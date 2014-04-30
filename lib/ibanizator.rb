@@ -6,6 +6,11 @@ class Ibanizator
     # Error handling
     # TODO
 
+    # delete spaces
+    validator                = Iban::Validator.new
+    options[:account_number] = validator.sanitize_input(options[:account_number])
+    options[:bank_code]      = validator.sanitize_input(options[:bank_code])
+
     # Fill account number to 10 digits
     while options[:account_number].size < 10 do
       options[:account_number] = options[:account_number].rjust(10, '0')
