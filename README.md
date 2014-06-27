@@ -1,6 +1,7 @@
 # ibanizator
 
-ibanizator calculates the iban for german accounts.
+ibanizator calculates the iban for german accounts. The database that is used to convert a bank number to a
+BIC is taken from [Deutsche Bundesbank](http://www.bundesbank.de/Redaktion/EN/Standardartikel/Tasks/Payment_systems/bank_sort_codes_download.html).
 
 ## Installation
 
@@ -9,7 +10,6 @@ Add this line to your application's Gemfile:
     gem 'ibanizator'
 
 ## Usage
-
 
 ### Calculate IBAN
 
