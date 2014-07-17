@@ -91,7 +91,7 @@ describe Ibanizator do
 
   describe '#bic' do
     before :each do
-      SwiftBic::BankDb.stub(:new => double('a bank', :bic => 'MARKDEF1100'))
+      allow(SwiftBic::BankDb).to receive(:new).and_return(double('a bank', :bic => 'MARKDEF1100'))
     end
 
     describe 'given valid german bank code' do
@@ -107,7 +107,7 @@ describe Ibanizator do
 
   describe '#bank_name' do
     before :each do
-      SwiftBic::BankDb.stub(:new => double('a bank', :bic => 'BBk Berlin'))
+      allow(SwiftBic::BankDb).to receive(:new).and_return(double('a bank', :bic => 'BBk Berlin'))
     end
 
     describe 'given valid german bank code' do

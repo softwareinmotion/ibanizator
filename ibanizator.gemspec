@@ -11,5 +11,5 @@ Gem::Specification.new do |s|
   s.files += Dir["lib/errors/*.rb"]
   s.homepage = 'https://github.com/softwareinmotion/ibanizator'
 
-  s.add_development_dependency 'rspec', '~> 2.99'
+  s.add_development_dependency 'rspec', '~> 3.0'
 end
