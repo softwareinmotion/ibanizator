@@ -60,7 +60,7 @@ describe Ibanizator do
       let(:iban) { 'DE58123456780123456789' }
 
       it 'returns true' do
-        expect(ibanizator.validate_iban(iban)).to be_true
+        expect(ibanizator.validate_iban(iban)).to eq(true)
       end
     end
 
@@ -68,7 +68,7 @@ describe Ibanizator do
       let(:iban) { 'DE13100000001234567890' }
 
       it 'returns false' do
-        expect(ibanizator.validate_iban(iban)).to be_false
+        expect(ibanizator.validate_iban(iban)).to eq(false)
       end
 
       context 'given invalid country code' do
@@ -91,7 +91,7 @@ describe Ibanizator do
 
   describe '#bic' do
     before :each do
-      SwiftBic::BankDb.stub(:new => stub(:bic => 'MARKDEF1100'))
+      SwiftBic::BankDb.stub(:new => double('a bank', :bic => 'MARKDEF1100'))
     end
 
     describe 'given valid german bank code' do
@@ -107,7 +107,7 @@ describe Ibanizator do
 
   describe '#bank_name' do
     before :each do
-      SwiftBic::BankDb.stub(:new => stub(:bic => 'BBk Berlin'))
+      SwiftBic::BankDb.stub(:new => double('a bank', :bic => 'BBk Berlin'))
     end
 
     describe 'given valid german bank code' do

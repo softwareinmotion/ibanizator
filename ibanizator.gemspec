@@ -10,4 +10,6 @@ Gem::Specification.new do |s|
   s.files = ["lib/ibanizator.rb", "lib/iban/validator.rb", "lib/iban/lengths.rb", "lib/swift_bic/bank_db.rb", "db/blz.txt"]
   s.files += Dir["lib/errors/*.rb"]
   s.homepage = 'https://github.com/softwareinmotion/ibanizator'
+
+  s.add_development_dependency 'rspec', '~> 2.99'
 end

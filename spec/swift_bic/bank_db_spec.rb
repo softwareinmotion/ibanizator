@@ -29,7 +29,7 @@ describe SwiftBic::BankDb do
   describe '#validate_bank_code' do
     context 'given valid german bank code' do
       it 'returns true' do
-        expect(bank_db.validate_bank_code('10000000')).to be_true
+        expect(bank_db.validate_bank_code('10000000')).to eq(true)
       end
     end
 
