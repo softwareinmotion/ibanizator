@@ -1,5 +1,6 @@
 require_relative 'iban/validator'
 require_relative 'swift_bic/bank_db'
+require_relative 'ibanizator/bank'
 
 class Ibanizator
   def calculate_iban options
