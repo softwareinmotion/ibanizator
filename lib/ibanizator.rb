@@ -1,8 +1,13 @@
 require_relative 'iban/validator'
 require_relative 'swift_bic/bank_db'
+require_relative 'ibanizator/bank_db'
 require_relative 'ibanizator/bank'
 
 class Ibanizator
+  def self.bank_db
+    @bank_db ||= BankDb.new
+  end
+
   def calculate_iban options
     # Error handling
     # TODO

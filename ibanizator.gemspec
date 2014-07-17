@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'ibanizator'
-  s.version = '0.1.7'
+  s.version = '0.2.0'
   s.date = '2014-06-27'
   s.licenses    = ['MIT']
   s.summary = 'An IBAN generator/validator and BIC generator for german accounts.'

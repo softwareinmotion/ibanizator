@@ -13,7 +13,9 @@ module SwiftBic
       end
     end
 
+    # <b>DEPRECATED:</b> Please use <tt>Ibanizator.bank_db</tt> instead.
     def initialize bank_code
+      warn "[DEPRECATION] `SwiftBic::BankDb` is deprecated.  Please use `Ibanizator::bank_db` instead."
       validate_bank_code bank_code
       @bank_data = BANKS[bank_code]
       raise BankNotFoundError unless @bank_data

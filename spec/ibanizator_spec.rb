@@ -128,4 +128,10 @@ describe Ibanizator do
       end
     end
   end
+
+  describe '.bank_db' do
+    it 'returns a BankDB' do
+      expect(Ibanizator.bank_db).to be_a(Ibanizator::BankDb)
+    end
+  end
 end
