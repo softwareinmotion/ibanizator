@@ -12,4 +12,5 @@ Gem::Specification.new do |s|
   s.homepage = 'https://github.com/softwareinmotion/ibanizator'
 
   s.add_development_dependency 'rspec', '~> 3.0'
+  s.add_development_dependency 'guard-rspec', '~> 4.2.10'
 end
