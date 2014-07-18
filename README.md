@@ -20,21 +20,32 @@ To calculate the iban for some german accounts, just use this method:
 
 In the current version the ibanizator gem only works for german accounts.
 
-### Validate IBAN
+### Validate an IBAN
 
 To validate the iban you need to check the length and after this check the checksum. For details please refer to
 the documentation online (e.g. http://es.wikipedia.org/wiki/IBAN).
 
-This gem provides a simple validator for several contries. All countries that are listed in the Iban::LENGTHS hash are supported at the moment.
+This gem provides a simple validator for several contries. All countries that are listed in the Ibanizator::Iban::LENGTHS hash are supported at the moment.
 
-    validator = Iban::Validator.new
-    valid = validator.validate_iban("DE68 2105 0170 0012 3456 78") # => true
+```ruby
+    iban = Ibanizator.iban_form_string("DE68 2105 0170 0012 3456 78")
+    iban.valid? # => true
+```
 
-There is an alternate way to validate an IBAN as a result of the 0.0.1 Version:
+### Information provided by an IBAN
 
-    ibanizator.validate_iban("DE68 2105 0170 0012 3456 78") # => true
+The Ibanizator::Iban class provides some handy utility methods to query
+information about an iban.
 
-The method returns true for valid ibans and false for invalid ibans. If the iban is too short or is using an unimplemented country code, the method throws an exception.
+```ruby
+    iban = Ibanizator.iban_form_string("DE68 2105 0170 0012 3456 78")
+    iban.country_code # => :DE
+
+    # there is extended data for german ibans
+    iban.extended_data.bank_code        # => "21050170"
+    iban.extended_data.account_number   # => "12345678"
+    iban.extended_data.bic              # => "NOLADE21KIE"
+```
 
 ### Find bank infos
 
