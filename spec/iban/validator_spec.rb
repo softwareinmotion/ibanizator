@@ -1,3 +1,4 @@
+require 'spec_helper'
 require_relative '../../lib/iban/validator'
 
 describe Iban::Validator do

@@ -1,6 +1,8 @@
 module Iban
   class Validator
+    # <b>DEPRECATED:</b> Please use <tt>Ibanizator.iban_from_string(an_iban).valid?</tt> instead.
     def validate_iban(input)
+      warn "[DEPRECATION] `Iban#validate_iban` is deprecated.  Please use `Ibanizator.iban_from_string(an_iban).valid?instead."
       iban = sanitize_input(input)
 
       valid_length?(iban) && valid_checksum?(iban)

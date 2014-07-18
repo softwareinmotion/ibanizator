@@ -20,9 +20,8 @@ class Ibanizator
     # TODO
 
     # delete spaces
-    validator                = Iban::Validator.new
-    options[:account_number] = validator.sanitize_input(options[:account_number])
-    options[:bank_code]      = validator.sanitize_input(options[:bank_code])
+    options[:account_number] = options[:account_number].to_s.gsub(/\s+/, '')
+    options[:bank_code]      = options[:bank_code].to_s.gsub(/\s+/, '')
 
     # Fill account number to 10 digits
     while options[:account_number].size < 10 do
@@ -35,10 +34,11 @@ class Ibanizator
     options[:country_code].to_s.upcase + checksum + options[:bank_code] + options[:account_number]
   end
 
+  # <b>DEPRECATED:</b> Please use <tt>Ibanizator.iban_from_string(an_iban).valid?</tt> instead.
   def validate_iban iban
+    warn "[DEPRECATION] `Ibanizator#validate_iban` is deprecated.  Please use `Ibanizator.iban_from_string(an_iban).valid?instead."
     # for the sake of compatibility
-    validator = Iban::Validator.new
-    validator.validate_iban(iban)
+    self.class.iban_from_string(iban).valid?
   end
 
   # <b>DEPRECATED:</b> Please use <tt>Ibanizator.bank_db.bank_by_bank_code</tt> instead.
