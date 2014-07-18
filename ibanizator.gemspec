@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'adamantium', '~> 0.2.0'
 
   s.add_development_dependency 'rake', '~> 10.3.2'
-  s.add_development_dependency 'bundler', '~> 1.6.3'
+  s.add_development_dependency 'bundler', '~> 1.6.1'
   s.add_development_dependency 'rspec', '~> 3.0'
   s.add_development_dependency 'guard-rspec', '~> 4.2.10'
 end
