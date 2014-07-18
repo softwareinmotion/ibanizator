@@ -38,8 +38,8 @@ The method returns true for valid ibans and false for invalid ibans. If the iban
 
 ### Find bank infos
 
-Find a bank `name`, `bank_code` or a `bic` from a german bank there is a bank
-db.
+If you need to get a bank name, bank code or a bic from a german bank and you
+have either a BIC or a bank code there is a bank db.
 
 ```ruby
 # find a bank by BIC
