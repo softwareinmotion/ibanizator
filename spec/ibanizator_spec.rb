@@ -99,10 +99,6 @@ describe Ibanizator do
         expect(ibanizator.bic('10000000')).to eq('MARKDEF1100')
       end
     end
-
-    describe 'given invalid bank code' do
-      it 'throws an exception'
-    end
   end
 
   describe '#bank_name' do
@@ -114,10 +110,6 @@ describe Ibanizator do
       it 'returns the bank name' do
         expect(ibanizator.bic('10000000')).to eq('BBk Berlin')
       end
-    end
-
-    describe 'given invalid bank code' do
-      it 'throws an exception'
     end
   end
 

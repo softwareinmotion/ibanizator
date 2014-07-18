@@ -34,12 +34,16 @@ class Ibanizator
     validator.validate_iban(iban)
   end
 
+  # <b>DEPRECATED:</b> Please use <tt>Ibanizator.bank_db.bank_by_bank_code</tt> instead.
   def bic bank_code
+    warn "[DEPRECATION] `Ibanizator#bank_name` is deprecated.  Please use `Ibanizator::bank_db.bank_by_bank_code` instead."
     bank_db = SwiftBic::BankDb.new bank_code
     bank_db.bic
   end
 
+  # <b>DEPRECATED:</b> Please use <tt>Ibanizator.bank_db.bank_by_bank_code</tt> instead.
   def bank_name bank_code
+    warn "[DEPRECATION] `Ibanizator#bank_name` is deprecated.  Please use `Ibanizator::bank_db.bank_by_bank_code` instead."
     bank_db = SwiftBic::BankDb.new bank_code
     bank_db.bank_name
   end
