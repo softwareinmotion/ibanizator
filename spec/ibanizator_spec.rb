@@ -126,4 +126,16 @@ describe Ibanizator do
       expect(Ibanizator.bank_db).to be_a(Ibanizator::BankDb)
     end
   end
+
+  describe '.iban_from_string(a_string)' do
+    it 'returns an Ibanizator::Iban' do
+      expect(Ibanizator.iban_from_string('an_iban')).to be_a(Ibanizator::Iban)
+    end
+
+    it 'delegates the object construction to Ibanizator::Iban.from_string' do
+      expect(Ibanizator::Iban).to receive(:from_string).with('a_string')
+
+      Ibanizator.iban_from_string('a_string')
+    end
+  end
 end

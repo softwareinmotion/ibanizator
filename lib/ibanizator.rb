@@ -1,12 +1,18 @@
 require_relative 'iban/validator'
 require_relative 'swift_bic/bank_db'
+
 require_relative 'ibanizator/bank_db'
 require_relative 'ibanizator/bank'
-require_relative 'ibanizator/iban_lengths'
+require_relative 'ibanizator/iban'
 
 class Ibanizator
+
   def self.bank_db
     @bank_db ||= BankDb.new
+  end
+
+  def self.iban_from_string(a_string)
+    Iban.from_string(a_string)
   end
 
   def calculate_iban options

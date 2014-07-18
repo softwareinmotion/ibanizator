@@ -26,7 +26,7 @@ describe Ibanizator::BankDb do
     it 'raises an BankNotFoundError if no bank could be found for the given bic' do
       expect {
         db.bank_by_bic('XXXXXXXXXXX')
-      }.to raise_error(BankNotFoundError)
+      }.to raise_error(Ibanizator::BankDb::BankNotFoundError)
     end
   end
 
@@ -38,7 +38,7 @@ describe Ibanizator::BankDb do
     it 'raises an BankNotFoundError if no bank could be found for the given bank code' do
       expect {
         db.bank_by_bank_code('000 000 00')
-      }.to raise_error(BankNotFoundError)
+      }.to raise_error(Ibanizator::BankDb::BankNotFoundError)
     end
   end
 end

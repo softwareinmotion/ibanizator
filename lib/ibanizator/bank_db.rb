@@ -1,5 +1,7 @@
 class Ibanizator
   class BankDb
+    class BankNotFoundError < StandardError ; end
+
     attr_reader :known_banks
 
     def initialize
