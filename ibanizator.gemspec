@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.licenses    = ['MIT']
 
   s.summary = 'An IBAN generator/validator and BIC generator for german accounts.'
-  s.description = <<-EOD.gsub(/\w+/, ' ')
+  s.description = <<-EOD.gsub(/\s+/, ' ')
     ibanizator generates the correct IBAN for given account number and bank number
     for german accounts. It is possible to validate given international IBANS.
     Calculates also the BIC and bank names for given german bank codes.
