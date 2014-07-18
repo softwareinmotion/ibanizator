@@ -1,4 +1,6 @@
-module Iban
+class Ibanizator
+  class Iban
+
   # according to wikipedia (http://en.wikipedia.org/wiki/IBAN)
   LENGTHS = {
     :AL => 28,
@@ -66,4 +68,5 @@ module Iban
     :GB => 22,
     :VG => 24
   }.freeze
+  end
 end
