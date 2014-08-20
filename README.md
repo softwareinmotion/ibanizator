@@ -28,7 +28,7 @@ the documentation online (e.g. http://es.wikipedia.org/wiki/IBAN).
 This gem provides a simple validator for several contries. All countries that are listed in the Ibanizator::Iban::LENGTHS hash are supported at the moment.
 
 ```ruby
-    iban = Ibanizator.iban_form_string("DE68 2105 0170 0012 3456 78")
+    iban = Ibanizator.iban_from_string("DE68 2105 0170 0012 3456 78")
     iban.valid? # => true
 ```
 
@@ -38,7 +38,7 @@ The Ibanizator::Iban class provides some handy utility methods to query
 information about an iban.
 
 ```ruby
-    iban = Ibanizator.iban_form_string("DE68 2105 0170 0012 3456 78")
+    iban = Ibanizator.iban_from_string("DE68 2105 0170 0012 3456 78")
     iban.country_code # => :DE
 
     # there is extended data for german ibans
