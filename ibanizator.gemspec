@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = 'ibanizator'
-  s.version = '0.3.0'.freeze
-  s.date = '2014-07-18'
+  s.version = '0.3.1'.freeze
+  s.date = '2015-02-14'
   s.licenses    = ['MIT']
 
   s.summary = 'An IBAN generator/validator and BIC generator for german accounts.'
@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'adamantium', '~> 0.2.0'
 
   s.add_development_dependency 'rake', '~> 10.3.2'
-  s.add_development_dependency 'bundler', '~> 1.6.1'
+  s.add_development_dependency 'bundler', '~> 1.6'
   s.add_development_dependency 'rspec', '~> 3.0'
   s.add_development_dependency 'guard-rspec', '~> 4.2.10'
 end
