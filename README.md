@@ -60,12 +60,12 @@ bank_1.bic        # => 'MARKDEF1100'
 bank_1.bank_code  # => '10000000'
 
 # find a bank by bank_code (de: Bankleitzahl)
-bank_2 = Ibanizator.bank_db.bank_bybank_code('100 000 00')
+bank_2 = Ibanizator.bank_db.bank_by_bank_code('100 000 00')
 bank_2.name       # => 'BBk Berlin'
 bank_2.bic        # => 'MARKDEF1100'
 bank_2.bank_code  # => '10000000'
 
-bank_3 = Ibanizator.bank_db.bank_bybank_code('10000000')
+bank_3 = Ibanizator.bank_db.bank_by_bank_code('10000000')
 bank_3.name       # => 'BBk Berlin'
 bank_3.bic        # => 'MARKDEF1100'
 bank_3.bank_code  # => '10000000'
