@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'ibanizator'
-  s.version = '0.3.2'.freeze
+  s.version = '0.3.3'.freeze
   s.date = '2015-02-14'
   s.licenses    = ['MIT']
 
@@ -21,6 +21,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'adamantium', '~> 0.2.0'
 
   s.add_development_dependency 'rake', '~> 11.1.2'
-  s.add_development_dependency 'bundler', '~> 1.11.2'
+  s.add_development_dependency 'bundler', '~> 1.11.1'
   s.add_development_dependency 'rspec', '~> 3.4'
 end
