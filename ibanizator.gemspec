@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'ibanizator'
-  s.version = '0.3.1'.freeze
+  s.version = '0.3.2'.freeze
   s.date = '2015-02-14'
   s.licenses    = ['MIT']
 
@@ -17,11 +17,10 @@ Gem::Specification.new do |s|
 
   s.files = Dir.glob("lib/**/*") + %w(license.md README.md db/blz.txt)
 
-  s.add_dependency 'equalizer', '~> 0.0.9'
+  s.add_dependency 'equalizer', '~> 0.0.11'
   s.add_dependency 'adamantium', '~> 0.2.0'
 
-  s.add_development_dependency 'rake', '~> 10.3.2'
-  s.add_development_dependency 'bundler', '~> 1.6'
-  s.add_development_dependency 'rspec', '~> 3.0'
-  s.add_development_dependency 'guard-rspec', '~> 4.2.10'
+  s.add_development_dependency 'rake', '~> 11.1.2'
+  s.add_development_dependency 'bundler', '~> 1.11.2'
+  s.add_development_dependency 'rspec', '~> 3.4'
 end
