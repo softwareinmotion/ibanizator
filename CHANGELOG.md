@@ -10,6 +10,7 @@
 - Added support for ruby 2.5
 - Added short version of bics containing an optional branch code e.g. Deutsche Bank can be found either with DEUTDEBBXXX or DEUTDEBB
 - Changed `#bank_by_bank_code` to favor banks whose bic end in 'XXX'
+- Changed the contact information
 
 ### 0.3.5
 
@@ -18,4 +19,4 @@
 
 ### 0.3.4 and blow
 
-Here be dragons
+~ *Here be dragons* ~
