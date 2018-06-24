@@ -8,6 +8,8 @@
 - Removed support for ruby 2.1
 - Added support for ruby 2.4
 - Added support for ruby 2.5
+- Added short version of bics containing an optional branch code e.g. Deutsche Bank can be found either with DEUTDEBBXXX or DEUTDEBB
+- Changed `#bank_by_bank_code` to favor banks whose bic end in 'XXX'
 
 ### 0.3.5
 
