@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe Ibanizator do
@@ -55,64 +57,6 @@ describe Ibanizator do
     end
   end
 
-  describe '#validate_iban' do
-    context 'given valid iban' do
-      let(:iban) { 'DE58123456780123456789' }
-
-      it 'returns true' do
-        expect(ibanizator.validate_iban(iban)).to eq(true)
-      end
-    end
-
-    context 'given invalid iban' do
-      let(:iban) { 'DE13100000001234567890' }
-
-      it 'returns false' do
-        expect(ibanizator.validate_iban(iban)).to eq(false)
-      end
-
-      context 'given invalid country code' do
-        let(:iban) { 'XX13100000001234567890' }
-
-        it 'returns false' do
-          expect(ibanizator.validate_iban(iban)).to eq(false)
-        end
-      end
-
-      context 'given invalid length' do
-        let(:iban) { 'DE13100000001234567' }
-
-        it 'returns false' do
-          expect(ibanizator.validate_iban(iban)).to eq(false)
-        end
-      end
-    end
-  end
-
-  describe '#bic' do
-    before :each do
-      allow(SwiftBic::BankDb).to receive(:new).and_return(double('a bank', :bic => 'MARKDEF1100'))
-    end
-
-    describe 'given valid german bank code' do
-      it 'returns the bic' do
-        expect(ibanizator.bic('10000000')).to eq('MARKDEF1100')
-      end
-    end
-  end
-
-  describe '#bank_name' do
-    before :each do
-      allow(SwiftBic::BankDb).to receive(:new).and_return(double('a bank', :bic => 'BBk Berlin'))
-    end
-
-    describe 'given valid german bank code' do
-      it 'returns the bank name' do
-        expect(ibanizator.bic('10000000')).to eq('BBk Berlin')
-      end
-    end
-  end
-
   describe '#character_to_digit' do
     context 'given :de as country code' do
       it 'calculates 1314 as numeral country code' do
@@ -127,7 +71,7 @@ describe Ibanizator do
     end
   end
 
-  describe '.iban_from_string(a_string)' do
+  describe '.iban_from_string' do
     it 'returns an Ibanizator::Iban' do
       expect(Ibanizator.iban_from_string('an_iban')).to be_a(Ibanizator::Iban)
     end
@@ -136,6 +80,38 @@ describe Ibanizator do
       expect(Ibanizator::Iban).to receive(:from_string).with('a_string')
 
       Ibanizator.iban_from_string('a_string')
+    end
+
+    context 'given valid iban' do
+      let(:iban) { 'DE58123456780123456789' }
+
+      it 'returns true' do
+        expect(Ibanizator.iban_from_string(iban).valid?).to eq(true)
+      end
+    end
+
+    context 'given invalid iban' do
+      let(:iban) { 'DE13100000001234567890' }
+
+      it 'returns false' do
+        expect(Ibanizator.iban_from_string(iban).valid?).to eq(false)
+      end
+
+      context 'given invalid country code' do
+        let(:iban) { 'XX13100000001234567890' }
+
+        it 'returns false' do
+          expect(Ibanizator.iban_from_string(iban).valid?).to eq(false)
+        end
+      end
+
+      context 'given invalid length' do
+        let(:iban) { 'DE13100000001234567' }
+
+        it 'returns false' do
+          expect(Ibanizator.iban_from_string(iban).valid?).to eq(false)
+        end
+      end
     end
   end
 end
