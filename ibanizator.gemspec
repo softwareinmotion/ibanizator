@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
 
   s.homepage = 'https://github.com/softwareinmotion/ibanizator'
 
-  s.authors = ['Christoph Stettner']
-  s.email = 'christoph.stettner@softwareinmotion.de'
+  s.authors = ['Julien Gantner', 'David Seeherr']
+  s.email = 'julien.gantner@softwareinmotion.de'
 
   s.files = Dir.glob('lib/**/*') + %w[license.md README.md db/blz.txt]
 
