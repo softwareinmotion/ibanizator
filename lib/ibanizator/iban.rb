@@ -38,6 +38,10 @@ class Ibanizator
       Validator.new(self).validate
     end
 
+    def formatted_iban_string
+      iban_string.scan(/.{1,4}/).join(' ')
+    end
+
     private
     def sanitize(input)
       input.to_s.gsub(/\s+/,'').upcase
