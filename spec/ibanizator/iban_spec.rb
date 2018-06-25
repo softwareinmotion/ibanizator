@@ -52,6 +52,12 @@ describe Ibanizator::Iban do
     end
   end
 
+  describe '#formatted_iban_string' do
+    it 'returns the country code of the given iban as symbol' do
+      expect(iban.formatted_iban_string).to eq('DE68 2105 0170 0012 3456 78')
+    end
+  end
+
   describe '.from_string' do
     it 'delegates the object creation to new' do
       expect(Ibanizator::Iban).to receive(:new).with('an_iban')
