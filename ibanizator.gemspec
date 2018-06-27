@@ -5,11 +5,11 @@ Gem::Specification.new do |s|
   s.licenses = ['MIT']
 
   s.summary = 'An IBAN generator/validator and BIC generator for german accounts.'
-  s.description = <<-HEREDOC
+  s.description = <<-DESCRIPTION
     ibanizator generates the correct IBAN for given account number and bank number
     for german accounts. It is possible to validate given international IBANS.
     Calculates also the BIC and bank names for given german bank codes.
-  HEREDOC
+  DESCRIPTION
 
   s.homepage = 'https://github.com/softwareinmotion/ibanizator'
 
@@ -18,10 +18,12 @@ Gem::Specification.new do |s|
 
   s.files = Dir.glob('lib/**/*') + %w[license.md README.md db/blz.txt]
 
+  s.required_ruby_version = '>= 2.1.0'
+
   s.add_dependency 'adamantium', '~> 0.2.0'
   s.add_dependency 'equalizer', '~> 0.0.11'
 
-  s.add_development_dependency 'bundler'
-  s.add_development_dependency 'rake'
+  s.add_development_dependency 'bundler', '> 0'
+  s.add_development_dependency 'rake', '> 0'
   s.add_development_dependency 'rspec', '~> 3.4'
 end
