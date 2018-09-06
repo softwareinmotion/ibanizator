@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'ibanizator'
-  s.version = '0.4.0'.freeze
+  s.version = '0.4.1'.freeze
   s.date = '2018-07-01'
   s.licenses = ['MIT']
 

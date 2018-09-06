@@ -1,3 +1,8 @@
+### 0.4.1
+
+- **Features:**
+  - Updated blz.txt (valid until 02.12.2018)
+
 ### 0.4.0
 
 - **Breaking Changes:**
