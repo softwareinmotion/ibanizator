@@ -1,7 +1,7 @@
 # ibanizator [![Build Status](https://travis-ci.org/softwareinmotion/ibanizator.svg?branch=master)](https://travis-ci.org/softwareinmotion/ibanizator)
 
 ibanizator calculates the iban for german accounts. The database that is used to convert a bank number to a
-BIC is taken from [Deutsche Bundesbank](http://www.bundesbank.de/Redaktion/EN/Standardartikel/Tasks/Payment_systems/bank_sort_codes_download.html).
+BIC is taken from [Deutsche Bundesbank](https://www.bundesbank.de/en/tasks/payment-systems/services/bank-sort-codes/download---bank-sort-codes-626218).
 
 ## Installation
 
