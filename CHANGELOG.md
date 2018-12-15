@@ -1,3 +1,10 @@
+### 0.4.2
+
+- **Features:**
+  - Updated blz.txt (valid until 03.03.2019)
+  - Updated ruby version from 2.5.1 to 2.5.3
+  - Updated Bundesbank link
+
 ### 0.4.1
 
 - **Features:**
