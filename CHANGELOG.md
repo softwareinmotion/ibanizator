@@ -1,3 +1,8 @@
+### 0.4.3
+
+- **Features:**
+  - Updated ruby version from 2.5.3 to 2.6.0
+
 ### 0.4.2
 
 - **Features:**
