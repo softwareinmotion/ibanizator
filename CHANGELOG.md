@@ -1,4 +1,4 @@
-### 0.4.3
+### Unreleased
 
 - **Features:**
   - Updated ruby version from 2.5.3 to 2.6.0
