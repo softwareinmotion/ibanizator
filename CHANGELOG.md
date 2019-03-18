@@ -1,21 +1,22 @@
-### Unreleased
+## Unreleased
 
 - **Features:**
+  - Updated blz.txt (valid until 02.06.2019)
   - Updated ruby version from 2.5.3 to 2.6.0
 
-### 0.4.2
+## 0.4.2
 
 - **Features:**
   - Updated blz.txt (valid until 03.03.2019)
   - Updated ruby version from 2.5.1 to 2.5.3
   - Updated Bundesbank link
 
-### 0.4.1
+## 0.4.1
 
 - **Features:**
   - Updated blz.txt (valid until 02.12.2018)
 
-### 0.4.0
+## 0.4.0
 
 - **Breaking Changes:**
   - Removed deprecated class `SwiftBic::BankDb` in favor of `Ibanizator::BankDb` ([#24](https://github.com/softwareinmotion/ibanizator/pull/24))
@@ -31,7 +32,7 @@
   - Removed support for ruby 2.1 and added support for ruby 2.4 and 2.5 ([#23](https://github.com/softwareinmotion/ibanizator/pull/23))
   - Changed the contact information ([#25](https://github.com/softwareinmotion/ibanizator/pull/25))
 
-### 0.3.5
+## 0.3.5
 
 - **Features:**
   - Updated blz.txt (valid until 02.09.2018)
@@ -39,6 +40,6 @@
 - **Fixes:**
   - Fixed failing test suite ([#20](https://github.com/softwareinmotion/ibanizator/pull/20))
 
-### 0.3.4 and blow
+## 0.3.4 and blow
 
 ~ *Here be dragons* ~
