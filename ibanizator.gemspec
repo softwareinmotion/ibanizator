@@ -1,10 +1,14 @@
+# frozen_string_literal: true
+
 Gem::Specification.new do |s|
   s.name = 'ibanizator'
-  s.version = '0.4.2'.freeze
-  s.date = '2018-12-15'
+  s.version = '0.4.3'
+  s.date = '2019-03-18'
   s.licenses = ['MIT']
 
-  s.summary = 'An IBAN generator/validator and BIC generator for german accounts.'
+  s.summary = <<-SUMMARY
+    An IBAN generator/validator and BIC generator for german accounts.
+  SUMMARY
   s.description = <<-DESCRIPTION
     ibanizator generates the correct IBAN for given account number and bank number
     for german accounts. It is possible to validate given international IBANS.
