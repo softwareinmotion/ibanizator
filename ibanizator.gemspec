@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'adamantium', '~> 0.2.0'
   s.add_dependency 'equalizer', '~> 0.0.11'
 
-  s.add_development_dependency 'bundler', '~> 1.16'
-  s.add_development_dependency 'rake', '~> 12.0'
-  s.add_development_dependency 'rspec', '~> 3.4'
+  s.add_development_dependency 'bundler', '~> 2.0'
+  s.add_development_dependency 'rake', '~> 12.3'
+  s.add_development_dependency 'rspec', '~> 3.8'
 end

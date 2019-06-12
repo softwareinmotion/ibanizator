@@ -4,6 +4,7 @@
 
 - **Features:**
   - Updated blz.txt (valid until 08.09.2019)
+  - Update tested ruby versions to 2.4.6, 2.5.5 and 2.6.3
   - Removed support for ruby 2.3 due to eol since 31.03.2019
   - Removed support for ruby 2.2 due to eol since 31.03.2018
 
