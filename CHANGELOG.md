@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.4.4
 
 - **Features:**
   - Updated blz.txt (valid until 08.09.2019)
