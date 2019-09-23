@@ -4,7 +4,7 @@
 
 - **Features:**
   - Updated blz.txt (valid until 08.12.2019)
-  - Update tested ruby versions to 2.4.6, 2.5.6 and 2.6.4
+  - Update tested ruby versions to 2.4.7, 2.5.6 and 2.6.4
 
 ## 0.4.4
 
