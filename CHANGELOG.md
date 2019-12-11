@@ -1,6 +1,6 @@
 # Changelog
 
-## unreleased
+## 0.4.6
 
 - **Features:**
   - Updated blz.txt (valid until 08.03.2020)

@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |s|
   s.name = 'ibanizator'
-  s.version = '0.4.5'
-  s.date = '2019-09-23'
+  s.version = '0.4.6'
+  s.date = '2019-12-11'
   s.licenses = ['MIT']
 
   s.summary = <<-SUMMARY
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir.glob('lib/**/*') + %w[license.md README.md db/blz.txt]
 
-  s.required_ruby_version = '>= 2.4.6'
+  s.required_ruby_version = '>= 2.4.9'
 
   s.add_dependency 'adamantium', '~> 0.2.0'
   s.add_dependency 'equalizer', '~> 0.0.11'
