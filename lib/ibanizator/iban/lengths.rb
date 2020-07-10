@@ -19,7 +19,7 @@ class Ibanizator
       :DK => 18,
       :DO => 28,
       :TL => 23,
-      :EG => 29,
+      :EG => 27,
       :EE => 20,
       :FO => 18,
       :FI => 18,
