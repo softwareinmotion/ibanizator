@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir.glob('lib/**/*') + %w[license.md README.md db/blz.txt]
 
-  s.required_ruby_version = '>= 2.4.9'
+  s.required_ruby_version = '>= 2.5.0'
 
   s.add_dependency 'adamantium', '~> 0.2.0'
   s.add_dependency 'equalizer', '~> 0.0.11'
