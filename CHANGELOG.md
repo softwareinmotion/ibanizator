@@ -3,6 +3,7 @@
 ## unreleased
 
 - **Features:**
+  - Updated blz.txt (valid until 06.09.2020)
   - Add ruby version 2.7.1 to tests
   - Update tested ruby versions to 2.5.8 and 2.6.6
   - Removed support for ruby 2.4 due to eol since 31.03.2020
