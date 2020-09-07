@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Ibanizator::BankDb do
   let(:db) { Ibanizator::BankDb.new }
   let(:deutsche_bank) do
-    Ibanizator::Bank.new('DEUTDEBBXXX', 'Deutsche Bank Fil Berlin', '10070000')
+    Ibanizator::Bank.new('DEUTDEBBXXX', 'Deutsche Bank', '10070000')
   end
 
   describe '#initialize' do
