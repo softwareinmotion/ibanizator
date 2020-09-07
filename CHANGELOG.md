@@ -13,7 +13,7 @@
   - Update tested ruby versions to 2.5.8 and 2.6.6
   - Removed support for ruby 2.4 due to eol since 31.03.2020
   - Updated dev dependencies
-  - Updated and added multiple iban lengths (thanks to svoop and skorth).
+  - Updated and added multiple iban lengths ([#27](https://github.com/softwareinmotion/ibanizator/pull/27), [#28](https://github.com/softwareinmotion/ibanizator/pull/28)) ~ *thanks to [skorth](https://github.com/skorth) and [svoop](https://github.com/svoop)*
 
 ## 0.4.6
 
