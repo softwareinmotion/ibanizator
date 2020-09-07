@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |s|
   s.name = 'ibanizator'
-  s.version = '0.4.7'
-  s.date = '2020-07-10'
+  s.version = '0.4.8'
+  s.date = '2020-09-07'
   s.licenses = ['MIT']
 
   s.summary = <<-SUMMARY
