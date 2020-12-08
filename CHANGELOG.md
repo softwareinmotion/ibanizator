@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- **Features:**
+  - Updated blz.txt (valid until 07.03.2021)
+  - Update tested ruby versions to 2.7.2
+
 ## 0.4.8
 
 - **Features:**
