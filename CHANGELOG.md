@@ -5,6 +5,8 @@
 - **Features:**
   - Updated blz.txt (valid until 06.06.2021)
   - Added 3.0.0 to tested ruby versions
+  - Added jruby, truffleruby and truffleruby-head to tested ruby versions
+  - Changed gem to be tested via github actions instead of travis.ci
 
 ## 0.4.9
 
