@@ -4,6 +4,7 @@
 
 - **Features:**
   - Updated blz.txt (valid until 06.06.2021)
+  - Added 3.0.0 to tested ruby versions
 
 ## 0.4.9
 
