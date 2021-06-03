@@ -5,7 +5,7 @@
 # For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
 
 name: Tests
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test:
