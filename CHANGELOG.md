@@ -1,5 +1,10 @@
 # Changelog
 
+## unreleased
+
+- **Features:**
+  - Updated bank database (valid until December 05 2021)
+
 ## 0.4.11
 
 - **Features:**
