@@ -79,7 +79,7 @@
   - Removed deprecated method `Iban::Validator.validate_iban` in favor of `Ibanizator.iban_from_string(iban).valid?` ([#24](https://github.com/softwareinmotion/ibanizator/pull/24))
   - Removed deprecated method `Ibanizator.new.validate_iban(iban)` in favor of `Ibanizator.iban_from_string(iban).valid?` ([#24](https://github.com/softwareinmotion/ibanizator/pull/24))
   - Removed deprecated method `Ibanizator.new.bic(bank_code)` in favor of `Ibanizator::BankDb.new.bank_by_bank_code(bank_code).bic` ([#24](https://github.com/softwareinmotion/ibanizator/pull/24))
-  - Removed deprecated method `Ibanizator.new.bank_name(bank_code)` in favor of `Ibanizator::BankDb.new.bank_by_bank_code(bank_code) .bank_name` ([#24](https://github.com/softwareinmotion/ibanizator/pull/24))
+  - Removed deprecated method `Ibanizator.new.bank_name(bank_code)` in favor of `Ibanizator::BankDb.new.bank_by_bank_code(bank_code).name` ([#24](https://github.com/softwareinmotion/ibanizator/pull/24))
 
 - **Features:**
   - Added `formatted_iban_string` instance method to `Ibanizator::Iban` for an iban with spaces. ([#17](https://github.com/softwareinmotion/ibanizator/pull/17)) ~ *thanks to [phoet](https://github.com/phoet)*
