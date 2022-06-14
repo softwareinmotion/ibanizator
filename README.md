@@ -8,7 +8,7 @@ BIC is taken from [Deutsche Bundesbank](https://www.bundesbank.de/en/tasks/payme
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'ibanizator'
+gem 'ibanizator', git: 'https://github.com/CashCapeAdmin/ibanizator'
 ```
 
 ## Usage
@@ -80,6 +80,12 @@ bank_2 == bank_3  # => true
 bank_4 = Ibanizator.bank_db.bank_by_bic('OASPDE6AXXX')
 bank_4 == bank_2  # => false
 ```
+
+## Update Banking List from Deutsche Bundesbank
+
+When the Deutsche Bundesbank updates their list, simple download the new `.txt` file and replace the file located at `https://github.com/CashCapeAdmin/ibanizator/blob/master/db/blz.txt` 
+
+Create a new minor release and update the gem in the project. 
 
 ## Licence
 
