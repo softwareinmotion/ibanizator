@@ -83,7 +83,7 @@ bank_4 == bank_2  # => false
 
 ## Update Banking List from Deutsche Bundesbank
 
-When the Deutsche Bundesbank updates their list, simple download the new `.txt` file and replace the file located at `https://github.com/CashCapeAdmin/ibanizator/blob/master/db/blz.txt` 
+When the Deutsche Bundesbank updates their list, simple download the new `.txt` file and replace the file located at `https://github.com/CashCapeAdmin/ibanizator/blob/master/db/blz.txt` from here [Bundesbank](https://www.bundesbank.de/en/tasks/payment-systems/services/bank-sort-codes/download-bank-sort-codes-626218).
 
 Create a new minor release and update the gem in the project. 
 
