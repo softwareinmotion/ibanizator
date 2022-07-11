@@ -4,6 +4,7 @@
 
 - **Features:**
   - Added 3.1 to tested ruby versions
+  - Updated bank database (valid until September 04 2022)
 
 ## 0.4.12
 
