@@ -1,6 +1,6 @@
 # Changelog
 
-## unreleased
+## 0.4.13
 
 - **Features:**
   - Added 3.1 to tested ruby versions
