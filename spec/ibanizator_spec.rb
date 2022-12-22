@@ -43,18 +43,6 @@ describe Ibanizator do
         expect(ibanizator.calculate_iban(options)[2..3]).to eq('58')
       end
     end
-
-    context 'given wrong bank code' do
-      it 'throws an exception'
-    end
-
-    context 'given to long account number' do
-      it 'throws an exception'
-    end
-
-    context 'given other country code than :de' do
-      it 'throws an exception'
-    end
   end
 
   describe '#character_to_digit' do
