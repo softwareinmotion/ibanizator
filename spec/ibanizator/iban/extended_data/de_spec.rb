@@ -12,9 +12,7 @@ describe Ibanizator::Iban::ExtendedData::DE do
     it 'raises an Ibanizator::Iban::Invalid error if the given iban is not valid' do
       iban = double('iban', valid?: false)
 
-      expect {
-        Ibanizator::Iban::ExtendedData::DE.new(iban)
-      }.to raise_error(Ibanizator::Iban::Invalid)
+      expect { Ibanizator::Iban::ExtendedData::DE.new(iban) }.to raise_error(Ibanizator::Iban::Invalid)
     end
   end
 
@@ -62,8 +60,8 @@ describe Ibanizator::Iban::ExtendedData::DE do
   end
 
   it 'makes the object immutable' do
-    expect {
+    expect do
       Ibanizator::Iban::ExtendedData::DE.new(iban).instance_variable_set(:@iban, nil)
-    }.to raise_error
+    end.to raise_error(FrozenError)
   end
 end

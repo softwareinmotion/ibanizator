@@ -24,8 +24,6 @@ describe Ibanizator::Bank do
   end
 
   it 'makes banks immutable' do
-    expect {
-      bank.bic.downcase!
-    }.to raise_error
+    expect { bank.bic.downcase! }.to raise_error(FrozenError)
   end
 end
